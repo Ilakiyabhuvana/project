@@ -1,0 +1,561 @@
+* {
+	box-sizing: border-box;
+} 
+.mainbody {
+	font-family: 'Montserrat', sans-serif;
+    background-color:#cce6ff
+}
+.navbody {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #cce6ff;
+    margin: 0;
+        padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.logoi img{float:left;}
+
+
+.a{
+	color: #87CEEB;
+}
+
+a{
+	text-decoration: none;
+      
+}
+
+
+
+.logo {
+	margin:0px;
+	font-size: 1.45em;
+      text-align:left;
+}
+
+.main-nav {
+	margin-top: 0px;
+  
+
+}
+.logo .a,
+.main-nav .a {
+	padding: 10px 50px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+      
+}
+
+.main-nav .a {
+	color: #cce6ff;
+	font-size: 1.99em;
+      font-family:Copperplate Gothic Light;
+      
+}
+
+.main-nav .a:hover {
+	color: #718daa;
+}
+
+
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #663399;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+          
+}
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+
+	.header {
+		flex-direction: column;
+		align-items: center;
+
+    	.header{
+		width: 100%;
+		margin: 0 auto;
+		max-width: 1150px
+	}
+}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+/** WORD SLIDER **/
+#r1
+{
+background-color:#663399;
+padding:10px;
+font-size:45px;
+font-family:Copperplate Gothic Light;
+position: relative;
+animation: mymove 10s infinite;
+   color:#cce6ff
+}
+@keyframes mymove 
+{
+	from {left: 0px;}
+     to {left: 80%;}
+  }
+
+/*** Slider **/
+
+   
+.slowFade {
+    display: flex;
+    align-items: flex-start;
+    background: #cce6ff;
+    height:100vh;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+border: 5px solid #663399;
+  margin-left:50px;
+      margin-right:30px;
+    border-radius: 5px;
+vertical-align: middle;
+    
+}
+.slowFade .slide img {
+    position: absolute;
+    min-width: 100%;
+    min-height:100%;
+    background:#cce6ff;
+    
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    opacity: 0;
+    transform: scale(1.5) rotate(15deg);
+    -webkit-animation: slowFade 32s infinite;
+            animation: slowFade 32s infinite;
+
+}
+.slowFade .slide:nth-child(3) img {
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+}
+.slowFade .slide:nth-child(2) img {
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
+}
+.slowFade .slide:nth-child(1) img {
+    -webkit-animation-delay: 24s;
+            animation-delay: 24s;
+}
+@keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}
+
+/*** footer ***/
+
+.footer{
+    background:#663399;
+    padding:1rem 7%;
+    border: 5px solid #a2a2a2;
+    border-radius: 10px;
+    font-family:Copperplate Gothic Light;
+}
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer .box-container .box{
+    flex:1 1 11rem;
+    margin:1rem;
+}
+.footer .box-container .box h3{
+    font-size: 1.5rem;
+    color:#cce6ff;
+    padding:1rem 0;
+    font-weight: normal;
+    font-family:Copperplate Gothic Light;
+}
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    color:#cce6ff;
+    padding:1rem 0;
+}
+.footer .box-container .box a{
+    font-size: 1.5rem;
+    color:#cce6ff;
+    padding:1rem 0;
+    display: block;
+    font-family:Copperplate Gothic Light;
+}
+.footer .box-container .box a:hover{
+    color:var(--yellow);
+}
+.footer .box-container .box p i{
+      padding-right: 0.5rem;
+    color:var(--yellow);
+}
+.footer .credit{
+    font-size: 1.5rem;
+    text-align: center;
+    border-top: .2rem solid rgba(255,255,255,.7);
+    padding:2rem 1rem;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    color:#cce6ff;
+    font-family:Copperplate Gothic Light;
+}
+.footer .credit a{
+    color:var(--yellow);
+}
+
+/* Music */
+
+
+/** CONTENT ***/
+main
+			{
+			  background-color: #663399;
+			  padding:20px;
+                    border: 5px solid #a2a2a2;
+                    border-radius: 10px;
+                    font-family:Copperplate Gothic Light;
+                    color: #cce6ff;
+}
+			.info
+			{
+			  font-size:30px;
+			   text-indent:50px;
+			  padding:20px;
+			  margin:20px;
+			  border:2px solid #a2a2a2;
+                    
+}
+
+/* ABOUT */
+.si{
+	
+	font-size:35px;
+	font-family:Copperplate Gothic Light;
+	color:#663399;
+	text-transform: uppercase;
+}
+.fi{
+	
+	font-size:35px;
+	font-family:"Comic Sans MS"
+}
+.c1
+		   {
+			 word-spacing:10px;
+			 letter-spacing:1px;
+			 font-size:17px;
+			 font-family:"Comic Sans MS";
+		   }
+		   #img 
+		   {
+             position: sticky;
+             z-index: -1;
+			 float:left;
+           }
+		   #a1{
+		   font-size:20px;
+		   border:2px solid #663399;
+		   border-radius: 10px;
+			 word-spacing:10px;
+			 letter-spacing:1px;
+			 font-family:"Comic Sans MS";
+		   }
+		   #a2{
+		   font-size:20px;
+		   border:3px solid #663399;
+		   border-radius: 10px;
+			 word-spacing:10px;
+			 letter-spacing:1px;
+			 font-family:"Comic Sans MS";
+		   }
+		   #c2
+		   {
+			border:3px solid #663399;
+			border-radius: 10px;
+			 word-spacing:10px;
+			 letter-spacing:1px;
+			 font-size:20px;
+			 font-family:Comic Sans MS;
+		   }
+		    #up
+			{
+			position:fixed;
+			right:10px;
+			bottom:10px;
+			width:50px;
+			height:50px;
+			border-radius:50%;
+			background:#e62739;
+			box-shadow: 0 0 10px rgba(0,0,0,0.25);
+			color:#ffffff;
+			border:none;
+			outline:none;
+			cursor:pointer;
+			}
+			figcaption
+			{
+			font-family:Comic Sans MS;
+			}
+			figure:hover
+              {
+                 transform:scale(1.08);
+				 cursor:pointer;
+              }
+			@media only screen and (max-width: 600px) 
+				{
+                    [className*="col-"] 
+				    {
+                      width: 100%;
+                    }
+				}
+				@media (max-width:788px){
+				td
+				{
+				  display:block;
+				}
+				.responsive 
+				{ 
+				  width:100%;
+				  height:100%;
+				}
+				figcaption
+						{
+						font-family:Comic Sans MS;
+						font-size:25px;
+						}
+					}
+					/** service **/
+					.servicemain
+					{
+						font-family:Copperplate Gothic Light;
+					}
+
+					/*** DOCTOR PAGE **/
+					.doctormain{
+						
+						background: linear-gradient(
+							105deg,
+							#88beee ,
+							#663399
+						);  
+					}
+					.mainform
+					{
+						margin: 15px;
+						padding: 10px;
+						box-sizing: border-box;
+						list-style: none;
+						font-family: Copperplate Gothic Light;
+					}
+					  
+					  .wrapperdoctor{
+						justify-content: center;
+						align-items: center;
+						min-height: 100vh;
+						display: flex;
+					  }
+					  .registration_form{
+						border-radius: 5px;
+						border:2px solid #663399;
+						width: 500px;	
+						background: #cce6ff;
+						padding: 25px;
+						text-transform: uppercase
+					  }
+					  .registration_form .title{
+						color: white;
+						background:rgb(130, 105, 189);
+						letter-spacing: 2px;
+						
+						text-align: center;
+						font-size: 25px;
+						text-transform: uppercase;
+						margin-top: -25px;
+						margin-left:-25px;
+						margin-right:-25px;
+						margin-bottom:-25px;
+					  }
+					  .form_wrap{
+						margin-top: 10px;
+					  }
+					  .form_wrap .input_wrap{
+						margin-bottom: 5px;
+						font-size: 10px;
+					  }
+					  .form_wrap .input_wrap:last-child{
+						margin-bottom: 0;
+					  }
+					  .form_wrap .input_wrap label{
+						margin-bottom: 2px;
+						color: #5050a5;
+						display: block;
+					  }
+					  
+					  .form_wrap  input[type='number']{
+						width: 100%;
+						padding: 10px;
+						outline: none;
+						border-radius: 3px;
+						border: 1.3px solid #9597a6;
+					  }
+					  .form_wrap  input[type='text']{
+						width: 100%;
+						padding: 10px;
+						outline: none;
+						border-radius: 3px;
+						border: 1.3px solid #9597a6;
+					  }
+					  .form_wrap  input[type='text']:focus{
+						border-color: #063abd;
+					  }
+					  
+					  
+					  /* Submit Button */
+					  .form_wrap .submit_btn{
+						font-size:17px;
+						border-radius: 3px;
+						text-transform: uppercase;
+						letter-spacing: 2px;
+						cursor: pointer;
+						width: 100%;
+						background: #663399;
+						padding: 10px;
+						border: 0;
+						color:white;
+					  }
+					  /* Button Hover effect */
+					  .form_wrap .submit_btn:hover{
+						background: #051c94;
+					  }
+					  /* period tracker */
+					  .box {
+						display: inlineBlock;
+						margin: 30px auto 20px auto;
+						box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25);
+						padding: 20px;
+						border-radius: 15px;
+						text-align: center;
+						font-weight: bold;
+						font-size: 1rem;
+					}
+					  
+					.calendar {
+						margin: 30px auto 20px auto;
+						box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25);
+					}
+					  
+					abbr[title] {
+						text-decoration: none;
+					}
+					.pt
+					{
+						color:#663399
+					}
+					.m-2
+					{
+						width:20%;
+						margin:40px;
+						padding:10px;
+						border:3px solid #663399
+					}
+					.mainpt
+					{
+						background-color: #663399;
+						padding:15px;
+                    border: 5px solid #a2a2a2;
+                    border-radius: 10px;
+                    font-family:Copperplate Gothic Light;
+                    color: #cce6ff;
+					width:70%;
+					}
+.loginpages
+{
+	border: 2px solid #88beee;
+	margin:0px;
+	padding:10px;
+	border-radius: 5px;
+	background-color: #663399;
+	
+}
+.at{
+	padding: 30px 88px;
+	margin:30px;
+	text-transform: uppercase;
+	text-align: center;
+	color:#eaeef1;
+	font-family: Copperplate Gothic Light;
+	font-size:30px;
+}
+.adminform{
+    border: 5px solid #88beee;
+	margin:0px;
+	padding:0px;
+	border-radius: 5px;
+	background-color: #663399;
+	width:40%;
+	height:40%;
+	font-family: Copperplate Gothic Light;
+	font-size:30px;
+}
+.adminform input{
+	width:50%;
+}
+.adminform button{
+	width:50%;
+}
+.adminform  label{
+	font-family: Copperplate Gothic Light;
+	font-size:30px;
+}
